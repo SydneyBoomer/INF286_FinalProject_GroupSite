@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
         
-
         h1, h2 {
             font-family: 'Arial', sans-serif;
             text-align: center;
@@ -14,6 +13,7 @@
             margin-bottom: 20px;
             font-weight: bold;
         }
+
         .navbar {
             display: flex;
             font-size: larger;
@@ -47,11 +47,13 @@
         .navbar a:hover {
             background-color:#8097c1;
         }
+
         .container {
             width: 80%;
             margin: 0 auto;
             padding: 40px 0;
         }
+
         .Directions {
             background: linear-gradient(135deg, #003366, #8097c1);  
             color: white;
@@ -175,6 +177,7 @@
             background-color: #003366;
             color: #8097c1;
         }
+
         @media (max-width: 768px) {
             .contact-info {
                 flex-direction: column;
@@ -201,12 +204,16 @@
             <li><a href="about.html">About</a></li>
         </ul>
     </nav>
+
     <section class="Directions">
+
         <div class="container">
             <h1>Directions</h1>
             <p>Find us at Ungererstr. 141, D-80805 Munich. Use the map below for more location details and directions.</p>
-    </div>
+        </div>
+
     </section>
+
     <div class="container">
         <div class="contact-info">
             <div>
@@ -228,7 +235,9 @@
             <iframe src="https://www.bing.com/search?pglt=417&q=Ungererstr.+141+Courtyard%2C+D-80805+Munich&cvid=81a7e96c7b244b6ea43ec73bdc689c74&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQNIBCDEwNTdqMGoxqAIAsAIA&FORM=ANNTA1&PC=NMTS" allowfullscreen></iframe>
         </div>
     </div>
+
     <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+    
     <script>
      window.onscroll = function() {
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
