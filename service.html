@@ -97,9 +97,6 @@
             color: white;
         }
 
-
-
-        
         .service-cards {
             display: flex;
             justify-content: center;
@@ -138,7 +135,6 @@
             margin-bottom: 10px;
         }
 
-       
         .visit {
             background-color: white;
             color: #999999;
@@ -185,15 +181,24 @@
             <li><a href="imprint.html">Imprint</a></li>
         </ul>
     </nav>
+
     <section class="services">
+
         <div class="container">
+
             <div class="header">
+
                 <h1>Our Services</h1>
                 <p class="services-description">Tombstones, Wooden Crosses, Wrought Iron Crosses? We have you covered!</p>
+                
                 <div class="decorative-line"></div>
+                
                 <p class="services-description">At Gravestone Services, we offer a variety of accomodations and customizations such as custom tombstones, engravings, restorations, or grave accessories.</p>
+            
             </div>
+            
             <section class="service-titles" id="service-titles">
+                
                 <div class="container">
                     <h2>Jump to a Service</h2>
                     
@@ -205,8 +210,11 @@
                     </ul>
                     
                 </div>
+
             </section>
+
             <div class="service-cards">
+
                 <div class="card" id="stones-crosses">
                     <h3>Stones and Crosses</h3>
                     <ul>
@@ -215,64 +223,71 @@
                         <li>Additional engravings and inscriptions of all kinds</li>
                     </ul>
                 </div>
-            <div class="card">
-                <div class id="engraving-inscriptions"></div>
-                <h3>Engraving & Inscriptions</h3>
-                <ul>
-                    <li>Carved and painted inscriptions</li>
-                    <li>Applied bronze and aluminum lettering</li>
-                    <li>Gold lettering, lead lettering</li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class id="cleaning-restoration"></div>
-                <h3>Cleaning & Restoration</h3>
-                <ul>
-                    <li>Stone cleaning with pressure washers and biodegradable cleaning agents</li>
-                    <li>Restoration and redesign services</li>
-                    <li>Grinding/working of inscription areas</li>
-                </ul>
-            </div>
+
+                <div class="card">
+                    <div class id="engraving-inscriptions"></div>
+                    <h3>Engraving & Inscriptions</h3>
+                    <ul>
+                        <li>Carved and painted inscriptions</li>
+                        <li>Applied bronze and aluminum lettering</li>
+                        <li>Gold lettering, lead lettering</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class id="cleaning-restoration"></div>
+                    <h3>Cleaning & Restoration</h3>
+                    <ul>
+                        <li>Stone cleaning with pressure washers and biodegradable cleaning agents</li>
+                        <li>Restoration and redesign services</li>
+                        <li>Grinding/working of inscription areas</li>
+                    </ul>
+                </div>
+
                 <div class="card" id="grave-enclosures">
-                <h3>Grave Enclosures</h3>
-                <ul>
-                    <li>New and reinstallation of grave enclosures of all kinds</li>
-                </ul>
+                    <h3>Grave Enclosures</h3>
+                    <ul>
+                        <li>New and reinstallation of grave enclosures of all kinds</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="visit">
-    <div class="container">
-        <h2>Visit Our Office</h2>
-        <p>Both in our office studio and at our exhibition space at Ungererstr. 116, you will find a wide selection of tombstones, different materials, shapes, and colors, as well as all common inscriptions and various sample materials.</p>
-        <p>We look forward to your visit! Feel free to make an appointment with our master for the best possible consultation.</p>
-    </div>
-</section>
-<a href="#" class="scroll-to-top" id="scrollToTopBtn">↑</a>
+    </section>
 
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+    <section class="visit">
+
+        <div class="container">
+            <h2>Visit Our Office</h2>
+            <p>Both in our office studio and at our exhibition space at Ungererstr. 116, you will find a wide selection of tombstones, different materials, shapes, and colors, as well as all common inscriptions and various sample materials.</p>
+            <p>We look forward to your visit! Feel free to make an appointment with our master for the best possible consultation.</p>
+        </div>
+
+    </section>
+    
+    <a href="#" class="scroll-to-top" id="scrollToTopBtn">↑</a>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
 
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    window.onscroll = function () {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
-        }
-    };
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
 
-    scrollToTopBtn.addEventListener('click', function () {
-        document.body.scrollIntoView({behavior: 'smooth'});
-    });
-</script>
+        scrollToTopBtn.addEventListener('click', function () {
+            document.body.scrollIntoView({behavior: 'smooth'});
+        });
+    </script>
 </body>
 </html>
