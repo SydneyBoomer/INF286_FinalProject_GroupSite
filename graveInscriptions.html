@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        header {
+            width: 100%;
+            background: linear-gradient(135deg, #003366, #8097c1); 
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 5px solid #faffff; 
+        }
+
+        .word-bank {
+            position: relative; 
+            top: 0; 
+            left: 0;
+            width: 100%;
+            background-color: #faffff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 90;
+        }
+
+        .word-bank a {
+            color:  #8097c1;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .word-bank a:hover {
+            background-color: #faffff;
+            color: #003366;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+
+        .image-gallery {
+            margin: 40px 30px 30px 30px;
+            text-align: center;
+            border: 2px solid #faffff;
+            padding: 20px;
+            border-radius: 12px;
+            overflow-y: auto;
+            max-height: 500px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 150px; 
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease; 
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .expanded {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            z-index: 1000;
+            cursor: zoom-out;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+        .exit-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #faffff;
+            color: #003366;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .exit-btn:hover {
+            background-color: #003366;
+            color: #faffff;
+        }
+        img {
+            cursor: pointer;
+            transition: transform 0.3s ease; 
+        }
+        .expanded {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(3); 
+            max-width: 90%;
+            max-height: 90%;
+            z-index: 1000;
+            cursor: zoom-out;
+            pointer-events: none;
+        }
+        .expanded img {
+            pointer-events: none;
+        }
+        .expanded img {
+            transition: transform 0.3s ease;
+        }
+        .overlay {
+            pointer-events: all;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let currentExpandedImage = null;
+
+            const images = document.querySelectorAll('.expandable');
+
+            images.forEach(img => {
+                img.addEventListener('click', function () {
+                    if (currentExpandedImage && currentExpandedImage !== img) {
+                        currentExpandedImage.classList.remove('expanded');
+                    }
+    
+                    if (currentExpandedImage !== img) {
+                        img.classList.add('expanded');
+                        currentExpandedImage = img;
+    
+                        const overlay = document.createElement('div');
+                        overlay.classList.add('overlay');
+                        const exitBtn = document.createElement('button');
+                        exitBtn.textContent = 'X';
+                        exitBtn.classList.add('exit-btn');
+                        overlay.appendChild(exitBtn);
+                        document.body.appendChild(overlay);
+    
+                        exitBtn.addEventListener('click', () => {
+                            img.classList.remove('expanded');
+                            overlay.remove();
+                            currentExpandedImage = null;
+                        });
+    
+                        overlay.addEventListener('click', () => {
+                            img.classList.remove('expanded');
+                            overlay.remove();
+                            currentExpandedImage = null;
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="tombstones.html">Tombstones</a></li>
+            <li><a href="graveInscriptions.html">Grave Inscriptions</a></li>
+            <li><a href="graveAccessories.html">Grave Accessories</a></li>
+            <li><a href="directions.html">Directions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>Grave Inscriptions</h1>
+    </header>
+
+    <section class="image-gallery" id="inscriptions">
+        <h2>Inscriptions</h2>
+        <p>
+            Techniques: Chiseled, Painted<br>
+            Common Fonts: Blockantiqua, Unzial Script, Italic/Script, Grotesque<br>
+            Possible Colors: White, Cristallino Gray, Light Brown, 
+            Reddish Brown, Dark Brown, Anthracite, Black, Silver, Gold Bronze<br>
+            Gold Fonts: chiseled and primed, leaf gold - laid out<br>
+            Other Materials: Lead, Applied Bronze or Aluminum Lettering, Single Letters
+        </p>
+        <div class="gallery">
+            <img src="https://www.steinmetz-reuter.de/bilder/grabinschriften/Atlantisfelsen-120.jpg" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/grabinschriften/Inschriften002-120.jpg" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/grabinschriften/Inschriften003-120.jpg" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/grabinschriften/Inschriften004-120.jpg" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/grabinschriften/Inschriften005-120.jpg" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/grabinschriften/Inschriften006-120.jpg" class="expandable">
+        </div>
+    </section>
+</body>
+</html>

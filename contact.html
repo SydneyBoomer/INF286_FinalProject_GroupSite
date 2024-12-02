@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>    
+        .ContactUs {
+        background: linear-gradient(135deg, #003366, #8097c1);
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        margin-bottom: 20px;
+        }
+
+        .ContactUs h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .ContactUs p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            background-color: #8097c1;
+            padding: 60px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contact-form .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 50px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .contact-form h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #003366 !important;
+            margin-bottom: 40px;
+        }
+
+        #contactForm label {
+            color:#003366;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 20px;
+            margin: 0 auto;
+        }
+
+        td {
+            padding: 15px;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        .form-group {
+            width: 100%; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #003366 !important;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 80%;
+            padding: 18px;
+            font-size: 1.3rem;
+            border: 2px solid #003366;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #8097c1;
+            background-color: #fff;
+            outline: none;
+        }
+
+        textarea {
+            height: 250px;
+            resize: vertical;
+        }
+
+        .form-group button {
+            padding: 18px 40px;
+            background-color: #003366;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 80%;
+            margin-top: 30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-group button:hover {
+            background-color: #8097c1;
+        }
+
+        .required {
+            color: red;
+            font-weight: normal;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form .container {
+                width: 90%;
+                padding: 60px;
+            }
+
+            .form-group {
+                margin-bottom: 25px;
+            }
+
+            .form-group button {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="tombstones.html">Tombstones</a></li>
+            <li><a href="graveInscriptions.html">Grave Inscriptions</a></li>
+            <li><a href="graveAccessories.html">Grave Accessories</a></li>
+            <li><a href="directions.html">Directions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <section class="ContactUs">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Our team is here to help! We'd love to hear from you. Please fill out the form below, and we'll get back to you as soon as possible. Thank you!</p>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <div class="container">
+            <form id="contactForm" action="thankYou.html" method="post">
+                <table>
+                    <tr>
+                        <td><label for="name">Full Name <span class="required">*</span></label></td>
+                        <td><input type="text" id="name" name="name" placeholder="Elon Musk" required /></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="email">Email Address <span class="required">*</span></label></td>
+                        <td><input type="email" id="email" name="email" placeholder="example@domain.com" required /></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="phone">Phone Number <span class="required">*</span></label></td>
+                        <td><input type="tel" id="phone" name="phone" placeholder="(859) 572-5100" required /></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="message">Message</label></td>
+                        <td><textarea id="message" name="message" placeholder="Type your message here..." required></textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" style="text-align:center;">
+                            <button type="submit">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!email.match(emailPattern)) {
+                alert('Please enter a valid email address.');
+                event.preventDefault();
+                return;
+            }
+
+            if (!name || !email || !phone || !message) {
+                alert('Please fill out all required fields.');
+                event.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

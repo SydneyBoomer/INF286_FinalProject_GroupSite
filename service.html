@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Services</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+
+        body {
+            background: #8097c1; 
+            color: #ffffff; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #faffff; 
+        }
+
+        .header {
+            background: linear-gradient(90deg, #003366, #8097c1);
+            padding: 30px 0;
+            margin-bottom: 0;
+        }
+
+        h1 {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .services {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .services h1 {
+            font-size: 3rem;
+        }
+
+        .services-description {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .decorative-line {
+            width: 80%; 
+            margin: 20px auto;
+            border-top: 2px dashed #8097c1;
+            color: #003366;
+        }
+
+        .services-description + .decorative-line {
+            margin-top: 30px;
+        }
+
+        .service-titles {
+            background: white; 
+            padding: 30px 0;
+            text-align: center;
+            
+        }
+
+        .service-titles h2 {
+            font-size: 2rem;
+            color: #003366;
+        }
+
+        .service-titles ul {
+            position: sticky;
+            top: 30px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .service-titles ul li {
+            display: inline-block;
+            margin: 10px 20px;
+            
+        }
+
+        .service-titles ul li a {
+            color: #999999;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .service-titles ul li a:hover {
+            padding: 5px;
+            background-color:#8097c1; 
+            color: white;
+        }
+
+
+
+        
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-bottom: 40px;
+            background-color: #8097c1;
+        }
+
+        .card {
+            background-color: #faffff; 
+            padding: 30px;
+            border-radius: 12px;
+            width: 60%;
+            height: 350px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+            min-width: 270px;
+        }
+
+        .card h3 {
+            color: #003366 !important;
+            font-size: 1.8rem;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.1rem;
+        }
+
+        .card ul li {
+            color: #003366 !important;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+       
+        .visit {
+            background-color: white;
+            color: #999999;
+            padding: 60px 10px;
+            text-align: center;
+        }
+
+        .visit h2 {
+            color: #003366;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffcc00;
+            color: #003366;
+            padding: 10px 15px;
+            border-radius: 50%;
+            display: none;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #003366;
+            color: #ffcc00;
+        }
+    </style>
+    
+
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="tombstones.html">Tombstones</a></li>
+            <li><a href="graveInscriptions.html">Grave Inscriptions</a></li>
+            <li><a href="graveAccessories.html">Grave Accessories</a></li>
+            <li><a href="directions.html">Directions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="imprint.html">Imprint</a></li>
+        </ul>
+    </nav>
+    <section class="services">
+        <div class="container">
+            <div class="header">
+                <h1>Our Services</h1>
+                <p class="services-description">Tombstones, Wooden Crosses, Wrought Iron Crosses? We have you covered!</p>
+                <div class="decorative-line"></div>
+                <p class="services-description">At Gravestone Services, we offer a variety of accomodations and customizations such as custom tombstones, engravings, restorations, or grave accessories.</p>
+            </div>
+            <section class="service-titles" id="service-titles">
+                <div class="container">
+                    <h2>Jump to a Service</h2>
+                    
+                    <ul>
+                        <li><a href="#stones-crosses">Stones and Crosses</a></li>
+                        <li><a href="#engraving-inscriptions">Engraving & Inscriptions</a></li>
+                        <li><a href="#cleaning-restoration">Cleaning & Restoration</a></li>
+                        <li><a href="#grave-enclosures">Grave Enclosures</a></li>
+                    </ul>
+                    
+                </div>
+            </section>
+            <div class="service-cards">
+                <div class="card" id="stones-crosses">
+                    <h3>Stones and Crosses</h3>
+                    <ul>
+                        <li>Sale offers including consultation and obtaining all necessary permits</li>
+                        <li>Custom manufacturing according to your specifications</li>
+                        <li>Additional engravings and inscriptions of all kinds</li>
+                    </ul>
+                </div>
+            <div class="card">
+                <div class id="engraving-inscriptions"></div>
+                <h3>Engraving & Inscriptions</h3>
+                <ul>
+                    <li>Carved and painted inscriptions</li>
+                    <li>Applied bronze and aluminum lettering</li>
+                    <li>Gold lettering, lead lettering</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class id="cleaning-restoration"></div>
+                <h3>Cleaning & Restoration</h3>
+                <ul>
+                    <li>Stone cleaning with pressure washers and biodegradable cleaning agents</li>
+                    <li>Restoration and redesign services</li>
+                    <li>Grinding/working of inscription areas</li>
+                </ul>
+            </div>
+                <div class="card" id="grave-enclosures">
+                <h3>Grave Enclosures</h3>
+                <ul>
+                    <li>New and reinstallation of grave enclosures of all kinds</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="visit">
+    <div class="container">
+        <h2>Visit Our Office</h2>
+        <p>Both in our office studio and at our exhibition space at Ungererstr. 116, you will find a wide selection of tombstones, different materials, shapes, and colors, as well as all common inscriptions and various sample materials.</p>
+        <p>We look forward to your visit! Feel free to make an appointment with our master for the best possible consultation.</p>
+    </div>
+</section>
+<a href="#" class="scroll-to-top" id="scrollToTopBtn">↑</a>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    scrollToTopBtn.addEventListener('click', function () {
+        document.body.scrollIntoView({behavior: 'smooth'});
+    });
+</script>
+</body>
+</html>

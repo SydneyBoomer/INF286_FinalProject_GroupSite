@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Tombstones</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        @media (max-width: 860px) {
+            .word-bank {
+                top: 78px !important;
+            }
+        
+        }
+        header {
+            width: 100%;
+            background: linear-gradient(135deg, #003366, #8097c1); 
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 5px solid #faffff; 
+        }
+
+        .word-bank {
+            position: sticky; 
+            top: 49px; 
+            left: 0;
+            width: 100%;
+            background-color: #faffff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 90;
+        }
+
+        .word-bank a {
+            color:  #8097c1;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .word-bank a:hover {
+            background-color: #faffff;
+            color: #003366;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+
+        .image-gallery {
+            margin: 40px 30px 30px 30px;
+            text-align: center;
+            border: 2px solid #faffff;
+            padding: 20px;
+            border-radius: 12px;
+            overflow-y: auto;
+            max-height: 500px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 150px; 
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease; 
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+
+        .expanded {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            z-index: 1000;
+            cursor: zoom-out;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+        .exit-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #faffff;
+            color: #003366;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .exit-btn:hover {
+            background-color: #003366;
+            color: #faffff;
+        }
+        img {
+            cursor: pointer;
+            transition: transform 0.3s ease; 
+        }
+        .expanded {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(3); 
+            max-width: 90%;
+            max-height: 90%;
+            z-index: 1000;
+            cursor: zoom-out;
+            pointer-events: none;
+        }
+        .expanded img {
+            pointer-events: none;
+        }
+        .expanded img {
+            transition: transform 0.3s ease;
+        }
+        .overlay {
+            pointer-events: all; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="tombstones.html">Tombstones</a></li>
+            <li><a href="graveInscriptions.html">Grave Inscriptions</a></li>
+            <li><a href="graveAccessories.html">Grave Accessories</a></li>
+            <li><a href="directions.html">Directions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Tombstones</h1>
+    </header>
+    <div class="word-bank">
+        <a href="#stone-panels">Stone Panels</a>
+        <a href="#slab-stones">Slab Stones</a>
+        <a href="#urn-pillow-stones">Urn / Pillow Stones</a>
+        <a href="#plant-stones">Plant Stones</a>
+        <a href="#edges-enclosures">Edges / Enclosures</a>
+    </div>
+    <section class="image-gallery" id="stone-panels">
+        <h2>Stone Panels</h2>
+        <p>Available in vertical or horizontal format, with a maximum face area of 1.5 m².</p>
+        <div class="gallery">
+            <img src="https://www.steinmetz-reuter.de/bilder/reihensteine/Almiscado.JPG" alt="Stone Panel 1" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/reihensteine/Astir%20Cristallino%20Marmor.JPG" alt="Stone Panel 2" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/reihensteine/Diabas%20fein%20vom%20Hieb.JPG" alt="Stone Panel 3" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/reihensteine/Hallandia%20mit%20Edelstahlkreuz.JPG" alt="Stone Panel 4" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/reihensteine/restauriertes%20Holzkreuz.JPG" alt="Stone Panel 5" class="expandable">
+        </div>
+    </section>
+    <section class="image-gallery" id="slab-stones">
+        <h2>Slab Stones</h2>
+        <p>Natural stones with various finishes. Common dimensions: Length: 1.30 m x Width: 0.50 m x Height: 0.16/0.18 m.</p>
+        <div class="gallery">
+            <img src="https://www.steinmetz-reuter.de/bilder/liegesteine/Hallandia-Granit.JPG" alt="Slab Stone 1" class="expandable"> 
+        </div>
+    </section>
+    <section class="image-gallery" id="urn-pillow-stones">
+        <h2>Urn / Pillow Stones</h2>
+        <p>Upright urn stones, also available in height 1.00 m x width 0.40 m. Lying pillow stones: Dimensions L 0.60 m x W 0.40 m, thickness as required.</p>
+        <div class="gallery">
+            <img src="https://www.steinmetz-reuter.de/bilder/urnensteine/Carnico%20Marmor%20Liegekissenstein.jpg" alt="Urn / Pillow Stone 1" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/urnensteine/Hallandia%20stehend.jpg" alt="Urn / Pillow Stone 2" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/urnensteine/Kashmir%20mit%20aufgesetzter%20Bronzeschrift.jpg" alt="Urn / Pillow Stone 3" class="expandable">
+        </div>
+    </section>
+    <section class="image-gallery" id="plant-stones">
+        <h2>Plant Stones</h2>
+        <p>In vertical or horizontal format, with a maximum surface area of 1.5 m².</p>
+        <div class="gallery">
+            <img src="https://www.steinmetz-reuter.de/bilder/anlagensteine/Carniko-Marmor.JPG" alt="Plant Stone 1" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/anlagensteine/Estremoz.JPG" alt="Plant Stone 2" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/anlagensteine/Estremoz-hell.jpg" alt="Plant Stone 3" class="expandable">
+            <img src="https://www.steinmetz-reuter.de/bilder/anlagensteine/Himalaya-Granit.jpg" alt="Plant Stone 4" class="expandable">
+        </div>
+    </section>  
+    <section class="image-gallery" id="edges-enclosures">
+        <h2>Tombstones with Edges/Enclosures</h2>
+        <p>Enclosures usually made of natural stone, matching the tombstone. More affordable options also available in artificial stone.</p>
+        <div class="gallery">
+            <img src="https://www.steinmetz-reuter.de/bilder/einfassungen/Carnico-Marmor.jpg" alt="Edge / Enclosure 1" class="expandable">
+<img src="https://www.steinmetz-reuter.de/bilder/einfassungen/Estremoz-Rose.jpg" alt="Edge / Enclosure 2" class="expandable">
+<img src="https://www.steinmetz-reuter.de/bilder/einfassungen/Kashmir-Granit.jpg" alt="Edge / Enclosure 3" class="expandable">
+<img src="https://www.steinmetz-reuter.de/bilder/einfassungen/Orion-dunkel.jpg" alt="Edge / Enclosure 4" class="expandable">
+        </div>
+    </section>
+    <script>
+        let currentExpandedImage = null;
+
+        const images = document.querySelectorAll('.expandable');
+
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                if (currentExpandedImage && currentExpandedImage !== img) {
+                    currentExpandedImage.classList.remove('expanded');
+                }
+
+                if (currentExpandedImage !== img) {
+                    img.classList.add('expanded');
+                    currentExpandedImage = img;
+
+                    const overlay = document.createElement('div');
+                    overlay.classList.add('overlay');
+                    const exitBtn = document.createElement('button');
+                    exitBtn.textContent = 'X';
+                    exitBtn.classList.add('exit-btn');
+                    overlay.appendChild(exitBtn);
+                    document.body.appendChild(overlay);
+
+                    exitBtn.addEventListener('click', () => {
+                        img.classList.remove('expanded');
+                        overlay.remove();
+                        currentExpandedImage = null;
+                    });
+
+                    overlay.addEventListener('click', () => {
+                        img.classList.remove('expanded');
+                        overlay.remove();
+                        currentExpandedImage = null;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
